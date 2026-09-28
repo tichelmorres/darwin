@@ -11,9 +11,12 @@ int main(int argc, char **argv) {
     cmd_append(&cmd, "gcc");
     cmd_append(&cmd, "-Wall");
     cmd_append(&cmd, "-Wextra");
+    cmd_append(&cmd, "-Wno-unused-variable");
     cmd_append(&cmd, "-O2");
-    cmd_append(&cmd, "-o", "main");
     cmd_append(&cmd, "main.c");
+    cmd_append(&cmd, "darwin.c");
+    cmd_append(&cmd, "lib/linalc.c");
+    cmd_append(&cmd, "-o", "main");
     cmd_append(&cmd, "-lgdi32");
     cmd_append(&cmd, "-luser32");
 
